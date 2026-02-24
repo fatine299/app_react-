@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #f88f7c;
+  --secondary: #00f2fe;
+  --robot-bg: #eef2f3;
+  --robot-body: #ffffff;
+  --robot-dark: #2d3436;
+  --bg-color: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.robot-auth-container {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 130vh;
+  background: var(--bg-color);
+}
+
+.robot-main-container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  height: 550px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.mascot-wrapper {
+  width: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.robot {
+  position: relative;
+  width: 160px;
+  height: 200px;
+  transition: all 0.3s ease;
+}
+
+.robot .hand.left { left: 5px; transform-origin: top center; }
+.robot .hand.right { right: 5px; transform-origin: top center; }
+
+.robot.waving .hand.right {
+  transform: rotate(-150deg);
+  animation: waveHand 1s infinite alternate;
+}
+@keyframes waveHand {
+  from { transform: rotate(-130deg); }
+  to { transform: rotate(-170deg); }
+}
+
+.robot.reading .head {
+  transform: translateY(10px) rotate(-5deg);
+}
+
+.robot.shy .hand.left {
+  transform: rotate(140deg) translateX(20px) translateY(-10px);
+}
+.robot.shy .hand.right {
+  transform: rotate(-140deg) translateX(-20px) translateY(-10px);
+}
+.robot.shy .eye {
+  background: #ff7675;
+}
+
+.form-wrapper {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-wrapper h2 {
+  color: var(--robot-dark);
+  margin-bottom: 5px;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.signup-form input:focus {
+  border-color: var(--primary);
+  background: #f0f9ff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--robot-dark);
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+.auth-msg {
+  margin-top: 15px;
+  color: red;
+  font-weight: 600;
+}
+
+.welcome-box {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  background: #d4edda;
+  border-radius: 8px;
+  color: #155724;
+  font-weight: 600;
+  text-align: center;
+}
+
+.toggle-text {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #636e72;
+}
+
+.toggle-link {
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}

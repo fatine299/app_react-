@@ -1,0 +1,112 @@
+/* Mission.css */
+
+.mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #1f2933;
+  text-align: center;
+  background: #ffffff;
+}
+
+.mission-container h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: #2b2e4a;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+/* Accent underline */
+.mission-container h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #f38451, #f38451);
+  margin: 0.75rem auto 0;
+  border-radius: 4px;
+}
+
+/* Cards container */
+.mission-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+/* Single card */
+.mission-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.2rem;
+  flex: 1 1 300px;
+  max-width: 360px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle top accent */
+.mission-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #f38451, #f38451);
+}
+
+/* Emoji title */
+.mission-box h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2933;
+  margin-bottom: 1rem;
+}
+
+/* Card hover */
+.mission-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Card paragraph */
+.mission-box p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mission-container {
+    padding: 4rem 1.5rem;
+  }
+
+  .mission-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mission-box {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,126 @@
+/* Container principal */
+.medecins-container {
+  position: relative;
+  padding: 8% 6%;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #fefefe, #ffffff);
+  font-family: "Montserrat", "Roboto", sans-serif; /* Updated font */
+  color: #1f2937;
+}
+
+/* Hero section */
+.medecins-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.medecins-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #c08686;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif; /* Professional font */
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  text-shadow: 1px 2px 8px rgba(0,0,0,0.05);
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.medecins-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 1rem auto 0 auto;
+  color: #374151;
+  font-weight: 400;
+  line-height: 1.8;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Doctors Cards Grid */
+.medecins-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual Card */
+.doctor-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  background: #fff;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.12);
+}
+
+/* Image Wrapper */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.doctor-card:hover .img-wrapper img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* Overlay for doctor info */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255,107,107,0) 0%, rgba(255,107,107,0.85) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.doctor-card:hover .overlay {
+  transform: translateY(0);
+}
+
+/* Overlay text */
+.overlay h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.overlay p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .medecins-hero h1 { font-size: 2.4rem; }
+  .medecins-hero p { font-size: 1.1rem; }
+  .img-wrapper { height: 220px; }
+}

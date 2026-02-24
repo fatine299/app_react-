@@ -1,0 +1,80 @@
+.apropos-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 6%;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+  margin-top: 40px;
+}
+
+/* Hero Section */
+.apropos-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+}
+
+.apropos-hero p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Cards Section */
+.apropos-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.apropos-card {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.apropos-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+/* Card headings */
+.apropos-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #3a3636;
+}
+
+/* Card text */
+.apropos-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #717479;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .apropos-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

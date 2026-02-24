@@ -1,0 +1,140 @@
+/* Navbar.css */
+
+/* Transparent Navbar */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+ background-color: rgba(50, 50, 50, 0.6);
+  box-shadow: none; /* remove shadow for clean look */
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Container inside navbar */
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+}
+
+/* Logo */
+.logo img {
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+/* Menu nav */
+.navmenu ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navmenu ul li a {
+  text-decoration: none;
+  color: #ffffff; /* white links to contrast with background */
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.navmenu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff6b6b; /* underline accent color */
+  transition: 0.3s;
+}
+
+.navmenu ul li a:hover::after,
+.navmenu ul li a.active::after {
+  width: 100%;
+}
+
+.navmenu ul li a:hover {
+  color: #ff6b6b; /* hover color for links */
+  font-weight: 600;
+}
+
+/* Button Se connecter */
+.btn-getstarted {
+  padding: 0.55rem 1.8rem;
+  background: linear-gradient(90deg, #ff6b6b, #ff9f43);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.btn-getstarted:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+  background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+}
+
+/* Responsive menu (mobile) */
+@media (max-width: 992px) {
+  .navmenu ul {
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.4); /* optional slight transparency for mobile menu */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .navmenu ul.show {
+    display: flex;
+  }
+
+  .navmenu ul li {
+    margin-bottom: 1rem;
+  }
+
+  .btn-getstarted {
+    margin-top: 1rem;
+  }
+}
+
+/* Optional: make navbar slightly opaque on scroll */
+.header.scrolled {
+  background-color: rgba(0, 0, 0, 0.2); /* subtle overlay if desired */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.navmenu ul li a {
+  color: #ffffff; /* default text color */
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 0.25rem 0.5rem; /* optional padding */
+}
+
+.navmenu ul li a:hover {
+  color: #ff6b6b; /* hover color */
+}
+
+/* Active link style */
+.navmenu ul li a.active {
+  color: #ff6b6b; /* entire text becomes pink */
+  font-weight: 600; /* optional: make active link bold */
+}
+

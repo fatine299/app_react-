@@ -1,0 +1,133 @@
+.rdv-container {
+  display: flex;
+  min-height: 80vh;
+  margin: 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+}
+
+/* Partie gauche : formulaire */
+.rdv-left {
+  flex: 1;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rdv-left h1 {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.rdv-left p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.rdv-left input,
+.rdv-left select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #e8c4c4;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.rdv-left input:focus,
+.rdv-left select:focus {
+  border-color: #a75528;
+  box-shadow: 0 0 8px rgba(167,85,40,0.3);
+  outline: none;
+}
+
+.rdv-row {
+  display: flex;
+  gap: 15px;
+}
+
+.rdv-row input {
+  flex: 1;
+}
+
+
+.rdv-btn {
+  background-color: #a75528;
+  color: #fff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.rdv-btn:hover {
+  background-color: #ed9522;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(167,85,40,0.3);
+}
+
+
+.rdv-right {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.rdv-right::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.977), rgba(0,0,0,0.1));
+  z-index: 1;
+}
+
+.rdv-right img {
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.rdv-right img:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 992px) {
+  .rdv-container {
+    flex-direction: column;
+    margin: 30px;
+  }
+
+  .rdv-left, .rdv-right {
+    padding: 40px 20px;
+  }
+
+  .rdv-right img {
+    width: 100%;
+  }
+}

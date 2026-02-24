@@ -1,0 +1,108 @@
+/* Container */
+.horaires-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 6%;
+  background-color: #f9fafb; /* soft background */
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  
+}
+
+/* Section Titles */
+.horaires-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+}
+
+/* Left / Right */
+.horaires-left,
+.horaires-right {
+  flex: 1 1 300px;
+}
+
+/* Opening hours cards */
+.horaires-card {
+  background-color: #ffffff;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.horaires-card h3 {
+  font-size: 1.1rem;
+  color: #1f2937;
+  margin-bottom: 0.3rem;
+}
+
+.horaires-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.horaires-card.closed p {
+  color: #ef4444; /* red for closed */
+  font-weight: 500;
+}
+
+/* Hover effect */
+.horaires-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Contact cards */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffffff;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  color: #f17163; /* soft purple accent */
+}
+
+/* Hover effect */
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .horaires-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 5%;
+  }
+
+  .horaires-left,
+  .horaires-right {
+    width: 100%;
+  }
+
+  .contact-card {
+    justify-content: center;
+  }
+}
